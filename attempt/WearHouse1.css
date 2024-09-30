@@ -1,0 +1,87 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 10px;
+    align-items: center;
+    height: 50px;
+}
+.logo h3{
+    padding-left: 20%;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding-left: 30px;
+}
+.menu ul{
+    display: flex;
+    /* padding: 0%; */
+    height: 100%;
+    margin: 0%;
+}
+.menu li{
+    list-style: none;
+    display: flex;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    align-items: center;
+}
+.menu li:hover{
+    background-color: lightgray;
+    transition: 0.3s;
+}
+/* #left{
+    display: flex;
+    width: 50%;
+    gap: 5%;
+}
+#right{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    gap: 4%;
+} */
+
+@media screen and (max-width:600px) {
+    /* nav{
+        flex-direction: column;
+        display: flex;
+        background-color: red;
+        justify-content: flex-start;
+    }
+    nav .logo{
+        background-color: aqua;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .menu ul{
+        flex-direction: column;
+    } */
+    .menu{
+        position: absolute;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 180px;
+        gap: 10px;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+        gap: 10px;
+    }
+}

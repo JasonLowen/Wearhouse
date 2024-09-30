@@ -1,0 +1,67 @@
+﻿@model WearHouse.Models.AddCategoryViewModel
+@{
+}
+
+
+
+<main>
+    <div class="top">
+        <h1>Product Categories</h1>
+    </div>
+    <div class="bottom">
+        <div class="add-category">
+            <button class="openAdd">Add Category</button>
+        </div>
+        <div class="list-category">
+            <table>
+                <tr>
+                    <th class="no">No.</th>
+                    <th class="category">Category</th>
+                    <th class="action">Action</th>
+                </tr>
+                <tr class="odd">
+                    <td class="no">1</td>
+                    <td class="category">Shoes</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td class="no">2</td>
+                    <td class="category">Hats</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td class="no">3</td>
+                    <td class="category">Clothes</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+
+<div id="overlay"></div>
+
+<div class="modalAdd">
+    <form action="Add" method="post" id="category-form" autocomplete="off">
+        <div class="add-top">
+            <div id="add-title">Add Category</div>
+            <button class="close">&times;</button>
+        </div>
+        <div class="add-middle">
+            <div id="add-text">Category</div>
+            <input type="text" placeholder="Insert Category Here" asp-for="CategoryName">
+        </div>
+        <div class="add-bottom">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

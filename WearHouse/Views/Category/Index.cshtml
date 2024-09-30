@@ -1,0 +1,122 @@
+﻿@model List<WearHouse.Models.Domain.Category>
+
+@{
+    var i = 1;
+    Layout = null;
+}
+
+@* <table class="categoryTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var category in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@category.CategoryName</td>
+                <td><a href="Category/Edit/@category.Id">Edit</a></td>
+                <td><a href="Category/Delete/@category.Id">Delete</a></td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table> *@
+
+<link rel="stylesheet" href="~/css/WearHouse_Category.css" asp-append-version="true" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearHouse_Category</title>
+    <link rel="stylesheet" href="/css/WearHouse_Navbar.css">
+    <link rel="stylesheet" href="/css/WearHouse_Category.css">
+    <link rel="stylesheet" href="/css/WearHouse_Footer.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="" class="navbar-logo">WearHouse</a>
+
+            <ul class="menu">
+                <div class="menu-left">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Category" asp-action="Index">Category</a>
+                </li>
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="About" asp-action="About">About Us</a>
+                </li>
+                </div>
+                <div class="menu-right">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Login" asp-action="Index">Log out</a>
+                </li>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top">
+            <h1>Product Categories</h1>
+        </div>
+        <div class="bottom">
+            <div class="add-category">
+                <button class="openAdd"> <a asp-controller="Category" asp-action="Add"> Add Category </a> </button>
+            </div>
+            <div class="list-category">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Category Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <td class="no">@i</td>
+                                <td class="category">@category.CategoryName</td>
+                                <td class="action">
+                                    <button class="openEdit"> <a href="Category/Edit/@category.Id">Edit</a></button>
+                                    <button class="openDelete"> <a href="Category/Delete/@category.Id">Delete</a></button>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="sosmed">
+            <a href="https://twitter.com" target="_blank"><img src="/images/twitterlogo.png" alt="twitter"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="/images/facebooklogo.png" alt="facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="/images/instagramlogo.png" alt="instagram"></a>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2021 [Nathan Jason Lowen]. All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="~/js/hamburger.js"></script>
+
+</body>
+</html>
+

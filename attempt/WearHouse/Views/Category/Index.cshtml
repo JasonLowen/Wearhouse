@@ -1,0 +1,28 @@
+﻿@model List<WearHouse.Models.Domain.Category>
+
+@{
+    var i = 4;
+}
+
+
+
+<table class="categoryTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var category in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@category.CategoryName</td>
+                <td><a href="Category/Edit/@category.Id">Edit</a></td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+
+<main>
+    <div class="login">
+        <div class="top">
+            Register
+        </div>
+        <div class="bottom">
+            <table>
+                <form action="WearHouse_Register.html" method="post" id="regis-form" autocomplete="off">
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>
+                        <div class="input-account" id="input-name">
+                            <input id="name-input" type="text" required placeholder="Input Your Name Here">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address</label></td>
+                    <td>
+                        <div class="input-account" id="input-email">
+                            <input id="email-input" type="text" required placeholder="asd@asd.com">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password" id="input-password">Password</label></td>
+                    <td>
+                        <div class="input-account">
+                            <input id="password-input" type="password" required placeholder="Input Your Password">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="confirm-password" id="input-confirm-password">Confirm Password</label></td>
+                    <td>
+                        <div class="input-account">
+                            <input id="confirm-input" type="password" required placeholder="Confirm Your Password">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div id="input-checkbox"><input type="checkbox" id="checkbox-input"> <label for="remember">By clicking register, I agree to the terms and conditions</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="submit">
+                            <a href="WearHouse_Login.html">
+                                <input type="submit" value="Register">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+</main>
+
+<script src="~/js/register.js"></script>

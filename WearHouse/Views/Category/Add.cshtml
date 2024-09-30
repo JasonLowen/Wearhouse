@@ -1,0 +1,70 @@
+﻿@model WearHouse.Models.AddCategoryViewModel
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/WearHouse_Category_Add.css" asp-append-version="true" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearHouse_Category</title>
+    <link rel="stylesheet" href="/css/WearHouse_Navbar.css">
+    <link rel="stylesheet" href="/css/WearHouse_Category.css">
+    <link rel="stylesheet" href="/css/WearHouse_Footer.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="" class="navbar-logo">WearHouse</a>
+
+            <ul class="menu">
+                <div class="menu-left">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Category" asp-action="Index">Category</a>
+                </li>
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="About" asp-action="About">About Us</a>
+                </li>
+                </div>
+                <div class="menu-right">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Login" asp-action="Index">Log out</a>
+                </li>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+<div id="overlay"></div>
+
+<div class="modalAdd">
+    <div class="add-top">
+        <div id="add-title">Add Category</div>
+        <button class="close"><a asp-controller="Category" asp-action="Index">&times;</a></button>
+    </div>
+    <form action="Add" method="post" id="category-form" autocomplete="off">
+        <div class="add-middle">
+            <div id="add-text">Category</div>
+            <input type="text" placeholder="Insert Category Here" asp-for="CategoryName">
+        </div>
+        <div class="add-bottom">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+    <script src="~/js/hamburger.js"></script>
+
+</body>
+</html>

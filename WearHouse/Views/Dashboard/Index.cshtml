@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/WearHouse_Dashboard.css" asp-append-version="true" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearHouse_Dashboard</title>
+    <link rel="stylesheet" href="/css/WearHouse_Navbar.css">
+    <link rel="stylesheet" href="/css/WearHouse_Dashboard.css">
+    <link rel="stylesheet" href="/css/WearHouse_Footer.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="" class="navbar-logo">WearHouse</a>
+
+            <ul class="menu">
+                <div class="menu-left">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Category" asp-action="Index">Category</a>
+                </li>
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="About" asp-action="About">About Us</a>
+                </li>
+                </div>
+                <div class="menu-right">
+                <li class="menu-choice">
+                    <a class="menu-link" asp-controller="Login" asp-action="Index">Log out</a>
+                </li>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login">
+            <div class="top">
+                Dashboard
+            </div>
+            <div class="bottom">
+                You are logged in!
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="sosmed">
+            <a href="https://twitter.com" target="_blank"><img src="/images/twitterlogo.png" alt="twitter"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="/images/facebooklogo.png" alt="facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="/images/instagramlogo.png" alt="instagram"></a>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2021 [Nathan Jason Lowen]. All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="~/js/hamburger.js"></script>
+
+</body>
+</html>

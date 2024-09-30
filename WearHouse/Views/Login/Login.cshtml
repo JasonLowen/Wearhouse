@@ -1,0 +1,80 @@
+﻿@model WearHouse.Models.AddLoginViewModel
+
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+
+<main>
+    <div class="login">
+        <div class="top">
+            Login
+        </div>
+        <div class="bottom">
+            <table>
+                <form id="login-form" action="Login" method="post" autocomplete="off">
+                <tr>
+                    <td><label for="email">Email Address</label></td>
+                    <td>
+                        <div class="input-account" id="input-email">
+                            <input id="email-input" type="text" required placeholder="asd@asd.com" asp-for="Name">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password" id="input-password">Password</label></td>
+                    <td>
+                        <div class="input-account">
+                            <input id="password-input" type="password" required placeholder="Input Your Password" asp-for="Password">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="checkbox-input"><input type="checkbox" id="checkbox-input"> <label for="remember">Remember Me</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="submit">
+                            <a href="">
+                                <input type="submit" value="Login" id="submitButton">
+                            </a>
+                            <a href="">
+                                Forgot Your Password?
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                </form>
+            </table>
+
+            <!-- <div class="email-input">
+                <label for="email">Email Address</label>
+                <input type="email">
+            </div> -->
+            <!-- <div class="password-input">
+                <label for="password">Password</label>
+                <input type="password">
+            </div> -->
+            <!-- <div class="remember-me">
+                <input type="checkbox">
+                <label for="remember">Remember Me</label>
+            </div>
+            <div class="login-forgot">
+                <div class="submit">
+                    <a href="">
+                        <button>Login</button>
+                    </a>
+                </div>
+                <div class="forgot">
+                    <a href="">
+                        Forgot Your Password?
+                    </a>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</main>
+
+<script src="~/js/login.js"></script>

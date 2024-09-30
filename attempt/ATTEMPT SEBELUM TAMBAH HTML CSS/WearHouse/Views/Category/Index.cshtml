@@ -1,0 +1,73 @@
+﻿@model List<WearHouse.Models.Domain.Category>
+
+@{
+    var i = 4;
+}
+
+<table class="categoryTable">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var category in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@category.CategoryName</td>
+                <td><a href="Category/Edit/@category.Id">Edit</a></td>
+                <td><a href="Category/Delete/@category.Id">Delete</a></td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+
+@* <link rel="stylesheet" href="~/css/WearHouse_Category.css" asp-append-version="true" />
+
+<main>
+    <div class="top">
+        <h1>Product Categories</h1>
+    </div>
+    <div class="bottom">
+        <div class="add-category">
+            <button class="openAdd" asp-action="Add" asp-controller="Category">Add Category</button>
+        </div>
+        <div class="list-category">
+            <table>
+                <tr>
+                    <th class="no">No.</th>
+                    <th class="category">Category</th>
+                    <th class="action">Action</th>
+                </tr>
+                <tr class="odd">
+                    <td class="no">1</td>
+                    <td class="category">Shoes</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td class="no">2</td>
+                    <td class="category">Hats</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td class="no">3</td>
+                    <td class="category">Clothes</td>
+                    <td class="action">
+                        <button class="openEdit">Edit</button>
+                        <button class="openDelete">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main> *@
+

@@ -1,0 +1,81 @@
+﻿* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+    padding-top: 45px;
+    min-height: 89.5vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .bottom .add-category button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .bottom button:hover {
+        opacity: 0.6;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    .bottom .list-category {
+        max-width: 1000px;
+        border: 1px solid black;
+        box-shadow: 1px 1px 10px;
+        padding: 20px;
+        padding-bottom: 30px;
+    }
+
+        .bottom .list-category Button {
+            border: none;
+            color: white;
+            padding: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border-radius: 5px;
+        }
+
+        .bottom .list-category .openEdit {
+            background-color: orange;
+        }
+
+        .bottom .list-category .openDelete {
+            background-color: red;
+        }
+
+        .bottom .list-category table {
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        .bottom .list-category .odd {
+            background-color: lightgray;
+        }
+
+        .bottom .list-category table .no {
+            width: 150px;
+        }
+
+        .bottom .list-category table .category {
+            width: 400px;
+        }
+
+        .bottom .list-category table .action {
+            width: 600px;
+        }
