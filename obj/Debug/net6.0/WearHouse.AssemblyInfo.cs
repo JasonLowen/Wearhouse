@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WearHouse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcddea51eccf4e079be98d7ea71b2d61938582a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe5d11efcee11fececf116eae78b07152ccbf38b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WearHouse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WearHouse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
